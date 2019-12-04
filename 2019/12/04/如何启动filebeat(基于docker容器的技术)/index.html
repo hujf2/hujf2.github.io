@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2013 | Hexo</title>
+  <title>如何启动filebeat(基于docker容器的技术) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2013&#x2F;index.html">
+  <meta name="description" content="如何启动filebeat(基于docker容器的技术).&#x2F;filebeat -e -c filebeat.test.yml 配置好filebeat.docker.yml (在宿主机上) [root@work-node1 filebeat-7.5.0-linux-x86_64]# cat filebeat.docker.yml 1filebeat:2 inputs: 3   -4     paths">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何启动filebeat(基于docker容器的技术)">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;04&#x2F;%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8filebeat(%E5%9F%BA%E4%BA%8Edocker%E5%AE%B9%E5%99%A8%E7%9A%84%E6%8A%80%E6%9C%AF)&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="如何启动filebeat(基于docker容器的技术).&#x2F;filebeat -e -c filebeat.test.yml 配置好filebeat.docker.yml (在宿主机上) [root@work-node1 filebeat-7.5.0-linux-x86_64]# cat filebeat.docker.yml 1filebeat:2 inputs: 3   -4     paths">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;static-www.elastic.co&#x2F;v3&#x2F;assets&#x2F;bltefdd0b53724fa2ce&#x2F;bltef163ed2752120ab&#x2F;5dcb1ff5ff19200218970869&#x2F;screenshot-infrastructure-ui.png">
+<meta property="og:updated_time" content="2019-12-04T07:56:30.196Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;static-www.elastic.co&#x2F;v3&#x2F;assets&#x2F;bltefdd0b53724fa2ce&#x2F;bltef163ed2752120ab&#x2F;5dcb1ff5ff19200218970869&#x2F;screenshot-infrastructure-ui.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -149,79 +154,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-如何启动filebeat(基于docker容器的技术)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2013/12/02/my-first-blog/" class="archive-article-date">
-  	<time datetime="2013-12-02T07:30:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-12-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/12/02/my-first-blog/">postName</a>
+    <h1 class="article-title" itemprop="name">
+      如何启动filebeat(基于docker容器的技术)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">tag1</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">tag2</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">tag3</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2019/12/04/%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8filebeat(%E5%9F%BA%E4%BA%8Edocker%E5%AE%B9%E5%99%A8%E7%9A%84%E6%8A%80%E6%9C%AF)/" class="archive-article-date">
+  	<time datetime="2019-12-04T07:56:30.196Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="如何启动filebeat-基于docker容器的技术"><a href="#如何启动filebeat-基于docker容器的技术" class="headerlink" title="如何启动filebeat(基于docker容器的技术)"></a>如何启动filebeat(基于docker容器的技术)</h1><p>./filebeat -e -c filebeat.test.yml</p>
+<h2 id="配置好filebeat-docker-yml-在宿主机上"><a href="#配置好filebeat-docker-yml-在宿主机上" class="headerlink" title="配置好filebeat.docker.yml (在宿主机上)"></a>配置好filebeat.docker.yml (在宿主机上)</h2><p><img src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltef163ed2752120ab/5dcb1ff5ff19200218970869/screenshot-infrastructure-ui.png" alt=""></p>
+<p>[root@work-node1 filebeat-7.5.0-linux-x86_64]# cat filebeat.docker.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">filebeat:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"> inputs: </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   -</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">     paths:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">       - &#x2F;data&#x2F;app&#x2F;default&#x2F;microservice.log </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">       - &#x2F;data&#x2F;app&#x2F;default&#x2F;webservice.log </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">       - &#x2F;data&#x2F;logs&#x2F;info.traffic-signal-8182.log</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">       - &#x2F;data&#x2F;logs&#x2F;info.traffic-signal-8282.log</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">     json.keys_under_root: true</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">     json.overwrite_keys: true</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">     input_type: log</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">output:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"> elasticsearch:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">   hosts: [&quot;myIP:9200&quot;]</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">setup:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"> kibana:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">   hosts: [&quot;myIP:5601&quot;]</span></pre></td></tr></table></figure>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/默认分类//" class="article-tag-list-link color5">默认分类</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<h1 id="启动脚本"><a href="#启动脚本" class="headerlink" title="启动脚本"></a>启动脚本</h1><p>[root@work-node1 filebeat-7.5.0-linux-x86_64]# cat start-docker.sh </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">docker run -d \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  --restart always \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  --name&#x3D;filebeat \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  --user&#x3D;root \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  --volume&#x3D;&quot;$(pwd)&#x2F;filebeat.docker.yml:&#x2F;usr&#x2F;share&#x2F;filebeat&#x2F;filebeat.yml:ro&quot; \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  --volume&#x3D;&quot;&#x2F;var&#x2F;lib&#x2F;docker&#x2F;containers:&#x2F;var&#x2F;lib&#x2F;docker&#x2F;containers:ro&quot; \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  --volume&#x3D;&quot;&#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock:ro&quot; \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  --volume&#x3D;&quot;&#x2F;data&#x2F;app&#x2F;default:&#x2F;data&#x2F;app&#x2F;default&quot; \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  --volume&#x3D;&quot;&#x2F;data&#x2F;logs:&#x2F;data&#x2F;logs&quot; \</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  docker.elastic.co&#x2F;beats&#x2F;filebeat:7.5.0 filebeat -e -strict.perms&#x3D;false \</span></pre></td></tr></table></figure>
 
 
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/04/%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8filebeat(%E5%9F%BA%E4%BA%8Edocker%E5%AE%B9%E5%99%A8%E7%9A%84%E6%8A%80%E6%9C%AF)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/12/03/README/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">README</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -244,8 +334,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -312,18 +402,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">tag1</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">tag2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">tag3</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
